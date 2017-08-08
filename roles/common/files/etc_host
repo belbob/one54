@@ -1,4 +1,10 @@
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-192.168.122.210 node01.belbob.thuis node01
-192.168.122.211 node02.belbob.thuis node02
+192.168.225.243 node02.donboscowilrijk.be node02
+192.168.225.240 node03.donboscowilrijk.be node03
+192.168.225.241 node04.donboscowilrijk.be node04
+192.168.225.242 node05.donboscowilrijk.be node05
+192.168.225.244 node06.donboscowilrijk.be node06
+192.168.225.245 node07.donboscowilrijk.be node07
+192.168.225.246 node08.donboscowilrijk.be node08
+192.168.225.247 node09.donboscowilrijk.be node09

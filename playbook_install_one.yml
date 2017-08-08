@@ -17,12 +17,12 @@
 
   roles:
   - common
-  - { role: sunstone, when: "inventory_hostname == 'node01.belbob.thuis'" }
+  - { role: sunstone, when: "inventory_hostname == 'node03.donboscowilrijk.be'" }
   - nodes
 
   tasks:
   - name: do ssh-keyscan
-    shell: "ssh-keyscan node01 node02 > ~/.ssh/known_hosts"
+    shell: "ssh-keyscan node02 node03 node04 node05 node06 node07 node08 node09> ~/.ssh/known_hosts"
     become_user: oneadmin
 
   - name: disable firewalld for testing

@@ -1,9 +1,21 @@
 [sunstone]
-node01.belbob.thuis ansible_host=192.168.122.210
+node03.donboscowilrijk.be ansible_host=192.168.225.240
 
 [nodes]
-node02.belbob.thuis ansible_host=192.168.122.211
+node02.donboscowilrijk.be ansible_host=192.168.225.243
+node04.donboscowilrijk.be ansible_host=192.168.225.241
+node05.donboscowilrijk.be ansible_host=192.168.225.242
+node06.donboscowilrijk.be ansible_host=192.168.225.244
+node07.donboscowilrijk.be ansible_host=192.168.225.245
+node08.donboscowilrijk.be ansible_host=192.168.225.246
+node09.donboscowilrijk.be ansible_host=192.168.225.247
 
 [all]
-node01.belbob.thuis ansible_host=192.168.122.210
-node02.belbob.thuis ansible_host=192.168.122.211
+node02.donboscowilrijk.be ansible_host=192.168.225.243
+node03.donboscowilrijk.be ansible_host=192.168.225.240
+node04.donboscowilrijk.be ansible_host=192.168.225.241
+node05.donboscowilrijk.be ansible_host=192.168.225.242
+node06.donboscowilrijk.be ansible_host=192.168.225.244
+node07.donboscowilrijk.be ansible_host=192.168.225.245
+node08.donboscowilrijk.be ansible_host=192.168.225.246
+node09.donboscowilrijk.be ansible_host=192.168.225.247
