@@ -1,0 +1,25 @@
+---
+repos:
+ - epel-release
+packages:
+ - ntp
+ - git
+ - wget
+ - ntp
+ - yum-utils
+ - iptraf-ng
+ - firewalld
+ - cockpit
+ - cockpit-storaged
+ - cockpit-machines
+ - cockpit-dashboard
+services:
+ - sshd
+ - ntpd
+ - firewalld
+sockets:
+ - cockpit.socket
+firewalld_services_enabled:
+ - ssh
+firewalld_ports_enabled:
+ - 9090/tcp

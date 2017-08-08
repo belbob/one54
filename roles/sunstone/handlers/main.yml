@@ -1,0 +1,20 @@
+---
+- name: restart nfs-server
+  service:
+    name: nfs-server
+    state: restarted
+
+- name: restart opennebula
+  service:
+    name: opennebula
+    state: restarted
+
+- name: restart opennebula-susntone
+  service:
+    name: opennebula-sunstone
+    state: restarted
+
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted

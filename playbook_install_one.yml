@@ -1,0 +1,32 @@
+---
+#
+# howto use:
+# edit hosts file
+# edit if needed all_vars.yml
+# ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
+# ansible-playbook -i hosts playbook_install_one.yml --extra-vars "target=see_hosts_file"
+#
+
+- hosts: "{{ target }}"
+  user: root             # or some adminuser
+  become: true
+  gather_facts: True
+
+  vars_files:
+  - all_vars.yml
+
+  roles:
+  - common
+  - { role: sunstone, when: "inventory_hostname == 'node01.belbob.thuis'" }
+  - nodes
+
+  tasks:
+  - name: do ssh-keyscan
+    shell: "ssh-keyscan node01 node02 > ~/.ssh/known_hosts"
+    become_user: oneadmin
+
+  - name: disable firewalld for testing
+    service:
+      name: firewalld
+      state: stopped
+      enabled: no

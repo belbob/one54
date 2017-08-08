@@ -1,0 +1,10 @@
+---
+- name: create new oneadmin
+  shell: "oneuser create admin password"
+  become_user: oneadmin
+  ignore_errors: yes
+
+- name: change admin to group oneadmin
+  shell: "oneuser chgrp admin oneadmin"
+  become_user: oneadmin
+  ignore_errors: yes

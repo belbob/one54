@@ -1,0 +1,15 @@
+---
+- name: Add the datastores export to fstab
+  lineinfile:
+    dest: /etc/libvirt/libvirtd.conf
+    line: '{{sunstone_ip}}:/var/lib/one/  /var/lib/one/  nfs   soft,intr,rsize=8192,wsize=8192,noauto'
+  when: "inventory_hostname != sunstone"
+
+- name: mount /var/lib/one
+  mount:
+    path: /var/lib/one
+    src: '{{sunstone_ip}}:/var/lib/one'
+    fstype: nfs
+    opts: soft,intr,rsize=8192,wsize=8192,noauto
+    state: mounted
+  when: "inventory_hostname != sunstone"

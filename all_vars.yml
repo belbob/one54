@@ -1,0 +1,7 @@
+---
+selinux_state: permissive
+#selinux_state: enforcing
+time_zone: Europe/Brussels
+one_ver: 5.4
+sunstone: node01.belbob.thuis
+sunstone_ip: 192.168.122.210

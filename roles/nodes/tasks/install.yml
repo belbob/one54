@@ -1,0 +1,27 @@
+---
+- name: enable opennebula.repo
+  template:
+    src: "opennebula_repo.j2"
+    dest: "/etc/yum.repos.d/opennebula.repo"
+    owner: root
+    group: root
+    mode: 644
+
+- name: Ensure some repos are installed
+  yum:
+    pkg: "{{ item }}"
+    state: latest
+    update_cache: true
+  with_items: "{{ repos }}"
+  when: repos is defined
+  tags:
+    - install
+
+- name: Ensure some packages are installed
+  yum:
+    pkg: "{{ item }}"
+    state: installed
+  with_items: "{{ packages }}"
+  when: packages is defined
+  tags:
+    - install

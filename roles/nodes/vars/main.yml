@@ -1,0 +1,10 @@
+---
+repos:
+ - centos-release-qemu-ev
+packages:
+ - qemu-kvm-ev
+ - opennebula-node-kvm
+services:
+ - libvirtd
+firewalld_ports_enabled:
+ - 29876/tcp

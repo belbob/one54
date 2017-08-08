@@ -1,0 +1,17 @@
+---
+packages:
+ - opennebula-server
+ - opennebula-sunstone
+ - opennebula-ruby
+ - opennebula-gate
+ - opennebula-flow
+ - redhat-lsb
+services:
+ - opennebula
+ - opennebula-sunstone
+ - opennebula-flow
+ - rpcbind
+ - nfs-server
+firewalld_ports_enabled:
+ - 9869/tcp
+ - 2049/tcp

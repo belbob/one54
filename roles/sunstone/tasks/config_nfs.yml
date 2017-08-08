@@ -1,0 +1,10 @@
+---
+- name: configure nfs
+  copy:
+    src: "exports"
+    dest: "/etc/exports"
+    owner: root
+    group: root
+    mode: 644
+  notify:
+    - restart nfs-server

@@ -1,0 +1,13 @@
+---
+- name: copy lan.net
+  copy:
+    src: "lan.net"
+    dest: "/var/lib/one/lan.net"
+    owner: oneadmin
+    group: oneadmin
+    mode: 0644
+
+- name: create virtual network lan
+  shell: "onevnet create lan.net"
+  become_user: oneadmin
+  ignore_errors: yes

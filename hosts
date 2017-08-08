@@ -1,0 +1,9 @@
+[sunstone]
+node01.belbob.thuis ansible_host=192.168.122.210
+
+[nodes]
+node02.belbob.thuis ansible_host=192.168.122.211
+
+[all]
+node01.belbob.thuis ansible_host=192.168.122.210
+node02.belbob.thuis ansible_host=192.168.122.211
